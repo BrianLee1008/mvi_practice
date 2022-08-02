@@ -1,4 +1,3 @@
-import org.gradle.api.JavaVersion
 import org.gradle.kotlin.dsl.dependencies
 import dependencies.Compose
 import dependencies.Versions
@@ -6,6 +5,7 @@ import dependencies.Versions
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -29,16 +29,23 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+
     buildFeatures {
         viewBinding = true
         compose = true
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.COMPOSE
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
 }
 
 dependencies {
@@ -61,4 +68,5 @@ dependencies {
     implementation(Compose.COMPOSE_FOUNDATION)
     implementation(Compose.COMPOSE_FOUNDATION_LAYOUT)
     implementation(Compose.COMPOSE_COIL)
+    implementation(Compose.MATERIAL)
 }
