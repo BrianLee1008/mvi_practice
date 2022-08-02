@@ -25,7 +25,7 @@ object PluginsVersions {
     const val APPLICATION = "7.2.1"
     const val GRADLE_ANDROID = "7.1.2"
     const val GRADLE_VERSIONS = "0.39.0"
-    const val KOTLIN = "1.7.0"
+    const val KOTLIN = "1.6.10"
 }
 
 dependencies {

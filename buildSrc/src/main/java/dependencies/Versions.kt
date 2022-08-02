@@ -10,7 +10,8 @@ object Versions {
     const val HILT_WORKER = "1.0.0"
     const val WORKER = "2.7.0"
 
-    const val COMPOSE = "1.2.0"
+    const val COMPOSE = "1.1.0"
     const val COMPOSE_CONSTRAINT = "1.0.0"
+    const val COMPOSE_UI_TOOLING = "1.1.0-rc01"
 
 }
