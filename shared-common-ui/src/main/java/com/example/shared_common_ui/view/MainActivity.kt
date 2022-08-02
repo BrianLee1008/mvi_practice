@@ -1,4 +1,4 @@
-package com.example.shared_common_ui
+package com.example.shared_common_ui.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

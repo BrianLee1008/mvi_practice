@@ -1,4 +1,6 @@
 package com.example.mvi_practice.ui
 
-class MviPracticeApplication {
+import android.app.Application
+
+class MviPracticeApplication : Application() {
 }
