@@ -4,7 +4,7 @@
 - Architecture
   - MVVM / MVI
   - Multi-Module
-  - CleanArchitecture
+  - Clean Architecture
  
 - DI
   - Hilt
