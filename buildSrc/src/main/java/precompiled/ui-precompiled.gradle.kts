@@ -52,6 +52,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":shared-common-domain"))
+    implementation(project(":shared-common-ui"))
+    implementation(project(":shared-foundation"))
 
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.2")
