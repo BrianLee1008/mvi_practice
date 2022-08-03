@@ -70,4 +70,5 @@ dependencies {
     implementation(Compose.COMPOSE_FOUNDATION_LAYOUT)
     implementation(Compose.COMPOSE_COIL)
     implementation(Compose.MATERIAL)
+    implementation(Compose.COMPOSE_CONSTRAINT)
 }
