@@ -1,11 +1,15 @@
 import dependencies.Compose
+import dependencies.Hilt
 import dependencies.Versions
+import gradle.kotlin.dsl.accessors._f28201936ac5dc93fbe24b62cb4541cf.implementation
+import gradle.kotlin.dsl.accessors._f28201936ac5dc93fbe24b62cb4541cf.kapt
 
 plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -57,6 +61,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
+    // Compose
     implementation(Compose.COMPOSE_ACTIVITY)
     implementation(Compose.COMPOSE_VIEWMODEL)
     implementation(Compose.COMPOSE_UI_TOOLING)
@@ -68,4 +73,9 @@ dependencies {
     implementation(Compose.COMPOSE_FOUNDATION_LAYOUT)
     implementation(Compose.COMPOSE_COIL)
     implementation(Compose.MATERIAL)
+
+    // Hilt
+    implementation(Hilt.CORE)
+    implementation(Hilt.NAVIGATION_COMPOSE)
+    kapt(Hilt.APT)
 }

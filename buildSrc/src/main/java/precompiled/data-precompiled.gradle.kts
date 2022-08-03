@@ -1,4 +1,7 @@
+import dependencies.Hilt
 import dependencies.Versions
+import gradle.kotlin.dsl.accessors._f28201936ac5dc93fbe24b62cb4541cf.implementation
+import gradle.kotlin.dsl.accessors._f28201936ac5dc93fbe24b62cb4541cf.kapt
 import org.gradle.kotlin.dsl.dependencies
 
 plugins {
@@ -6,6 +9,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -56,4 +60,9 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    // Hilt
+    implementation(Hilt.CORE)
+    implementation(Hilt.NAVIGATION_COMPOSE)
+    kapt(Hilt.APT)
 }
