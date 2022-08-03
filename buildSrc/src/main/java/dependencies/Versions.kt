@@ -7,6 +7,7 @@ object Versions {
     const val ANDROIDX_FRAGMENT = "1.5.0"
     const val LIFECYCLE = "2.5.0"
     const val HILT = "2.43"
+    const val HILT_NAVIGATION_COMPOSE = "1.0.0"
     const val HILT_WORKER = "1.0.0"
     const val WORKER = "2.7.0"
 

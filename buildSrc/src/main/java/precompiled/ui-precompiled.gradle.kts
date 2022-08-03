@@ -1,5 +1,6 @@
 import org.gradle.kotlin.dsl.dependencies
 import dependencies.Compose
+import dependencies.Hilt
 import dependencies.Versions
 
 plugins {
@@ -7,6 +8,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -71,4 +73,10 @@ dependencies {
     implementation(Compose.COMPOSE_COIL)
     implementation(Compose.MATERIAL)
     implementation(Compose.COMPOSE_CONSTRAINT)
+
+    // Hilt
+    implementation(Hilt.CORE)
+    implementation(Hilt.NAVIGATION_COMPOSE)
+    kapt(Hilt.APT)
+
 }
