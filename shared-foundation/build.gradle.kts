@@ -1,4 +1,5 @@
 import dependencies.Versions
+import dependencies.Compose
 
 plugins {
     id("com.android.library")
@@ -56,4 +57,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
+
+    // Compose
+    implementation(Compose.COMPOSE_COMPILER)
+    implementation(Compose.COMPOSE_RUNTIME)
 }
