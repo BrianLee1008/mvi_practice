@@ -53,7 +53,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared-natwork"))
+    implementation implementation(project(':shared-network',))
     implementation(project(":shared-foundation"))
     implementation(project(":shared-common-data"))
     implementation(project(":shared-common-domain"))

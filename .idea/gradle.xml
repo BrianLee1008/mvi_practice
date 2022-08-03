@@ -19,7 +19,7 @@
             <option value="$PROJECT_DIR$/shared-common-domain" />
             <option value="$PROJECT_DIR$/shared-common-ui" />
             <option value="$PROJECT_DIR$/shared-foundation" />
-            <option value="$PROJECT_DIR$/shared-natwork" />
+            <option value="$PROJECT_DIR$/shared-network" />
           </set>
         </option>
       </GradleProjectSettings>

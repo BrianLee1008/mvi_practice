@@ -8,14 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
+import com.example.shared_common_domain.uistate.CommonArticleContentUiState
+import com.example.shared_common_ui.preview.CommonArticleDummyData
 import com.example.shared_common_ui.util.dpToSp
 
 @Composable
 fun FeedCommonArticle1(
     modifier: Modifier = Modifier,
-    articleTitle: String,
-    articleDescription: String
+    uiState: CommonArticleContentUiState
 ) {
     Row(
         modifier = modifier
@@ -24,7 +26,7 @@ fun FeedCommonArticle1(
     ) {
 
         Text(
-            text = articleTitle, fontWeight = FontWeight.Normal,
+            text = uiState.title, fontWeight = FontWeight.Normal,
             fontSize = 20.dpToSp(),
             color = MaterialTheme.colors.surface
         )
@@ -32,7 +34,7 @@ fun FeedCommonArticle1(
         Spacer(modifier = Modifier.width(10.dp))
 
         Text(
-            text = articleDescription,
+            text = uiState.content,
             fontSize = 14.dpToSp(),
             color = MaterialTheme.colors.surface
         )
@@ -45,6 +47,8 @@ fun FeedCommonArticle1(
 
 @Preview
 @Composable
-fun PreviewFeedCommonArticle1() {
-    FeedCommonArticle1(articleTitle = "title", articleDescription = "description")
+fun PreviewFeedCommonArticle1(
+    @PreviewParameter(CommonArticleDummyData::class) dummyData: CommonArticleContentUiState
+) {
+    FeedCommonArticle1(uiState = dummyData)
 }
