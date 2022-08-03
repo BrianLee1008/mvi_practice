@@ -5,6 +5,7 @@
   - MVVM / MVI
   - Multi-Module
   - Clean Architecture
+  - Layered Architecture
  
 - DI
   - Hilt
