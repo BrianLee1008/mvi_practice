@@ -1,9 +1,12 @@
 import dependencies.Compose
+import dependencies.Hilt
 import dependencies.Versions
 
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -80,4 +83,9 @@ dependencies {
     implementation(Compose.COMPOSE_FOUNDATION_LAYOUT)
     implementation(Compose.COMPOSE_COIL)
     implementation(Compose.MATERIAL)
+
+    // Hilt
+    implementation(Hilt.CORE)
+    implementation(Hilt.NAVIGATION_COMPOSE)
+    kapt(Hilt.APT)
 }

@@ -1,0 +1,3 @@
+package com.example.shared_foundation.usecase
+
+interface UseCaseAction
