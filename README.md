@@ -16,4 +16,3 @@
   - Compose
   - Compose - Navigation
   - Material Theme
-  - Redux
